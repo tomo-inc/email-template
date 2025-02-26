@@ -3,8 +3,7 @@
 ## variables
 
 ```
-app.logo
-app.name
+app.logo (height = 40, width = [40, 200])
 code.color
 ```
 
@@ -16,4 +15,13 @@ code.color
   ...variables,
   ...{code}
 })
+```
+
+## send
+
+tplConfig = tpl/config
+data from biz
+
+```
+send({clientId, type}, tplConfig, data);
 ```
