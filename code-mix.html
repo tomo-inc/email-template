@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Email Template</title>
+    </head>
+    <style>
+        body {
+            background: rgba(235, 236, 241, 1);
+            margin: 0;
+        }
+    </style>
+    <body>
+        <style>
+            @font-face {
+                font-family: "Switzer";
+                font-weight: 700;
+                font-style: bold;
+                src: url("./Switzer/Switzer-Medium.woff2") format("woff");
+            }
+            @font-face {
+                font-family: "Switzer";
+                font-weight: 400;
+                font-style: normal;
+                src: url("./Switzer/Switzer-Regular.woff2") format("woff");
+            }
+        </style>
+
+        <div id="tplCode" style="display: none">
+            <div
+                class="tomo-email-tpl"
+                style="
+                    background: #fff;
+                    border: 1px solid rgba(226, 227, 240, 1);
+                    margin: 10px;
+                    border-radius: 2px;
+                    overflow: hidden;
+                    text-align: left;
+                    font-family: Switzer;
+                    padding-bottom: 25px;">
+                <div
+                    class="tomo-tpl-header"
+                    style="
+                        padding: 18px 5px 26px;
+                        height: 42px;
+                        line-height: 42px;
+                        margin: 0 40px;
+                        border-bottom: 1px solid rgba(145, 158, 171, 0.2);">
+                    <div
+                        class="tomo-tpl-name"
+                        style="
+                            font-size: 20px;
+                            font-weight: 500;
+                            background: url({logo})
+                                no-repeat center center;
+                            background-size: auto 30px;
+                            height: 40px;
+                            padding-left: 36px;"></div>
+                </div>
+                <div
+                    class="tomo-tpl-main"
+                    style="padding: 40px 40px 30px; margin: 0 40px"
+                >
+                    <div
+                        class="tomo-tpl-main-title"
+                        style="font-size: 20px; font-weight: 700"
+                    >
+                        Verify your email
+                    </div>
+                    <div class="tomo-tpl-main-desc" style="font-weight: 400;
+                font-size: 14px;
+                color: rgba(25, 25, 25, 0.9);
+                line-height: 1.8;
+                margin: 10px 0 0;">
+                        This code expires in 10 minutes. Do not share this code
+                        withanyone.
+                    </div>
+                    <div
+                        class="tomo-tpl-main-code"
+                        style="
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 2;
+                    letter-spacing: 20px;
+                    background: rgba(246, 246, 246, 1);
+                    border-radius: 10px;
+                    padding: 5px 40px;
+                    margin: 20px 0 30px;
+                    display: inline-block;color:{color}"
+                    >
+                        {value}
+                    </div>
+                    <div class="tomo-tpl-main-tips" style="
+                            font-size: 12px;
+                            font-weight: 400;
+                            color: rgba(99, 115, 129, 1);">
+                        For your security, please keep this information
+                        confidential and <strong>DO NOT SHARE</strong> it with
+                        anyone, including <strong>customer service</strong>.
+                    </div>
+                </div>
+
+                <div class="tomo-tpl-faq"
+                    style="
+                        text-align: center;
+                        border-top: 1px solid rgba(145, 158, 171, 0.2);
+                        padding: 20px 0 30px;
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: rgba(99, 115, 129, 1);
+                    "
+                >
+                    If you have any questions, reach out to our support team at
+                    support@tomo.inc
+                </div>
+                <div class="tomo-tpl-foot"
+                    style="
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 16.8px;
+                        letter-spacing: 0%;
+                        color: rgba(137, 137, 171, 1);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    "
+                >
+                    <div class="tomo-logo-provider" style="margin-right: 4px">Powered by</div>
+                    <img src="./assets/power.svg" />
+                </div>
+            </div>
+        </div>
+
+        <div id="renderCode"></div>
+
+        <div id="tplLink" style="display: none">
+            <div
+                class="tomo-email-tpl"
+                style="
+                    background: #fff;
+                    border: 1px solid rgba(226, 227, 240, 1);
+                    margin: 10px;
+                    border-radius: 2px;
+                    overflow: hidden;
+                    text-align: left;
+                    font-family: Switzer;
+                    padding-bottom: 25px;
+                "
+            >
+                <div
+                    class="tomo-tpl-header"
+                    style="
+                        padding: 18px 5px 26px;
+                        height: 42px;
+                        line-height: 42px;
+                        margin: 0 40px;
+                        border-bottom: 1px solid rgba(145, 158, 171, 0.2);
+                    "
+                >
+                    <div
+                        class="tomo-tpl-name"
+                        style="
+                            font-size: 20px;
+                            font-weight: 500;
+                            background: url({logo})
+                                no-repeat center center;
+                            background-size: auto 30px;
+                            height: 40px;
+                            padding-left: 36px;
+                        "
+                    ></div>
+                </div>
+                <div
+                    class="tomo-tpl-main"
+                    style="padding: 40px 40px 30px; margin: 0 40px"
+                >
+                    <div
+                        class="tomo-tpl-main-title"
+                        style="font-size: 20px; font-weight: 700"
+                    >
+                        Request to export seed phrase(s)
+                    </div>
+                    <div
+                        class="tomo-tpl-main-desc"
+                        style="
+                            font-weight: 400;
+                            font-size: 14px;
+                            color: rgba(25, 25, 25, 0.9);
+                            line-height: 1.8;
+                            margin: 10px 0 0;
+                        "
+                    >
+                        We received a request to export your seed phrase(s). To
+                        proceed, please click the link below:
+                    </div>
+                    <div
+                        class="tomo-tpl-main-link"
+                        style="
+                            color: #0094ff;
+                            word-break: break-all;
+                            font-size: 12px;
+                            font-weight: 400;
+                            margin: 20px 0 30px;
+                        "
+                    >
+                        <a target="_blank" nofollow noreferrer herf="{value}"
+                            >{value}</a
+                        >
+                    </div>
+                    <div
+                        class="tomo-tpl-main-tips"
+                        style="
+                            font-size: 12px;
+                            font-weight: 400;
+                            color: rgba(99, 115, 129, 1);
+                        "
+                    >
+                        For your security, please keep this information
+                        confidential and <strong>DO NOT SHARE</strong> it with
+                        anyone, including <strong>customer service</strong>.
+                    </div>
+                </div>
+
+                <div
+                    class="tomo-tpl-faq"
+                    style="
+                        text-align: center;
+                        border-top: 1px solid rgba(145, 158, 171, 0.2);
+                        padding: 20px 0 30px;
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: rgba(99, 115, 129, 1);
+                    "
+                >
+                    If you have any questions, reach out to our support team at
+                    support@tomo.inc
+                </div>
+                <div
+                    class="tomo-tpl-foot"
+                    style="
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 16.8px;
+                        letter-spacing: 0%;
+                        color: rgba(137, 137, 171, 1);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    "
+                >
+                    <div class="tomo-logo-provider" style="margin-right: 4px">
+                        Powered by
+                    </div>
+                    <img src="./assets/power.svg" />
+                </div>
+            </div>
+        </div>
+        <div id="renderLink"></div>
+
+        <script>
+            (function () {
+                let app = {
+                    logo: "https://tomo.inc/images/logo.svg",
+                };
+                let code = {
+                    value: "7634",
+                    color: "#007bff",
+                };
+
+                let tpl = document.getElementById("tplCode").innerHTML;
+                let render = document.getElementById("renderCode");
+                render.innerHTML = renderTpl(tpl, { ...app, ...code });
+            })();
+
+            (function () {
+                let app = {
+                    logo: "https://tomo.inc/images/logo.svg",
+                };
+                let link = {
+                    value: "https://www.figma.com/design/QwstUKDJh4QtSEZelwnMYx/TG-Wallet?node-id=29604-23668&t=dmb3exBmpbTcoqUE-0&G-Wallet?node-id=29604-23668&t=dmb3exBmpbTcoqUE-0G-Wallet?node-id=29604-23668&t=dmb3exBmpbTcoqUE-0G-Wallet?node-id=29604-23668&t=dmb3exBmpbTcoqUE-0G-Wallet?node-id=29604-23668&t=dmb3exBmpbTcoqUE-0G-Wallet?node-id=29604-23668&t=dmb3exBmpbTcoqUE-0G-Wallet?node-id=29604-23668&t=dmb3exBmpbTcoqUE-0G-Wallet?node-id=29604-23668&t=dmb3exBmpbTcoqUE-0G-Wallet?node-id=29604-23668&t=dmb3exBmpbTcoqUE-0",
+                };
+
+                let tpl = document.getElementById("tplLink").innerHTML;
+                let render = document.getElementById("renderLink");
+                render.innerHTML = renderTpl(tpl, { ...app, ...link });
+            })();
+
+            function renderTpl(temp, data, regexp) {
+                if (
+                    !(Object.prototype.toString.call(data) === "[object Array]")
+                )
+                    data = [data];
+                var ret = [];
+                for (var i = 0, j = data.length; i < j; i++) {
+                    ret.push(replaceAction(data[i]));
+                }
+                return ret.join("");
+                function replaceAction(object) {
+                    return temp.replace(
+                        regexp || /\\?\{([^}]+)\}/g,
+                        function (match, name) {
+                            if (match.charAt(0) == "\\") return match.slice(1);
+                            return object[name] != undefined
+                                ? object[name]
+                                : "";
+                        },
+                    );
+                }
+            }
+        </script>
+    </body>
+</html>
