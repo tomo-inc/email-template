@@ -28,94 +28,73 @@
         </style>
 
         <div id="tplCode" style="display: none">
-            <div
-                class="tomo-email-tpl"
-                style="
+            <div class="tomo-email-tpl" style="
+                    max-width: 600px;
                     background: #fff;
                     border: 1px solid rgba(226, 227, 240, 1);
-                    margin: 10px;
+                    margin: 10px auto;
                     border-radius: 2px;
                     overflow: hidden;
                     text-align: left;
                     font-family: Switzer;
-                    padding-bottom: 25px;">
-                <div
-                    class="tomo-tpl-header"
-                    style="
-                        padding: 18px 5px 26px;
+                    padding-bottom: 35px;">
+                <div class="tomo-tpl-header" style="
+                        padding: 18px 0 26px;
                         height: 42px;
                         line-height: 42px;
-                        margin: 0 40px;
+                        max-width: 520px;
+                        margin:0 auto;
                         border-bottom: 1px solid rgba(145, 158, 171, 0.2);">
-                    <div
-                        class="tomo-tpl-name"
-                        style="
-                            font-size: 20px;
-                            font-weight: 500;
-                            background: url({logo})
-                                no-repeat center center;
+                    <div class="tomo-tpl-name" style="
+                            background: url({{logo}}) no-repeat center center;
                             background-size: auto 30px;
-                            height: 40px;
-                            padding-left: 36px;"></div>
+                            height: 40px;"></div>
                 </div>
-                <div
-                    class="tomo-tpl-main"
-                    style="padding: 40px 40px 30px; margin: 0 40px"
-                >
-                    <div
-                        class="tomo-tpl-main-title"
-                        style="font-size: 20px; font-weight: 700"
-                    >
+                <div class="tomo-tpl-main" style="padding: 40px 24px 30px;
+                        max-width: 450px;
+                        margin:0 auto;">
+                    <div class="tomo-tpl-main-title"
+                        style="font-size: 20px; font-weight: 700">
                         Verify your email
                     </div>
-                    <div class="tomo-tpl-main-desc" style="font-weight: 400;
-                font-size: 14px;
-                color: rgba(25, 25, 25, 0.9);
-                line-height: 1.8;
-                margin: 10px 0 0;">
-                        This code expires in 10 minutes. Do not share this code
-                        withanyone.
-                    </div>
-                    <div
-                        class="tomo-tpl-main-code"
-                        style="
-                    font-size: 24px;
-                    font-weight: 700;
-                    line-height: 2;
-                    letter-spacing: 20px;
-                    background: rgba(246, 246, 246, 1);
-                    border-radius: 10px;
-                    padding: 5px 40px;
-                    margin: 20px 0 30px;
-                    display: inline-block;color:{color}"
-                    >
-                        {value}
-                    </div>
-                    <div class="tomo-tpl-main-tips" style="
-                            font-size: 12px;
+                    <div class="tomo-tpl-main-desc" style="
                             font-weight: 400;
-                            color: rgba(99, 115, 129, 1);">
+                            font-size: 14px;
+                            color: rgba(25, 25, 25, 0.9);
+                            line-height: 1.8;
+                            margin: 10px 0 0;">
+                        This code expires in 10 minutes. Do not share this code with anyone.
+                    </div>
+                    <div class="tomo-tpl-main-code" style="
+                            font-size: 24px;
+                            font-weight: 700;
+                            line-height: 2;
+                            letter-spacing: 20px;
+                            background: rgba(246, 246, 246, 1);
+                            border-radius: 10px;
+                            padding: 5px 40px;
+                            margin: 20px 0 30px;
+                            display: inline-block;color:{{color}}">
+                        {{value}}
+                    </div>
+                    <div class="tomo-tpl-main-tips" style="font-size: 12px; font-weight: 400; color: rgba(99, 115, 129, 1);">
                         For your security, please keep this information
                         confidential and <strong>DO NOT SHARE</strong> it with
                         anyone, including <strong>customer service</strong>.
                     </div>
                 </div>
 
-                <div class="tomo-tpl-faq"
-                    style="
+                <div class="tomo-tpl-faq" style="
                         text-align: center;
                         border-top: 1px solid rgba(145, 158, 171, 0.2);
-                        padding: 20px 0 30px;
+                        padding: 20px 20px 30px;
                         font-size: 12px;
                         font-weight: 400;
-                        color: rgba(99, 115, 129, 1);
-                    "
-                >
+                        color: rgba(99, 115, 129, 1);">
                     If you have any questions, reach out to our support team at
                     support@tomo.inc
                 </div>
-                <div class="tomo-tpl-foot"
-                    style="
+                <div class="tomo-tpl-foot" style="
                         font-weight: 400;
                         font-size: 12px;
                         line-height: 16.8px;
@@ -123,9 +102,7 @@
                         color: rgba(137, 137, 171, 1);
                         display: flex;
                         justify-content: center;
-                        align-items: center;
-                    "
-                >
+                        align-items: center;">
                     <div class="tomo-logo-provider" style="margin-right: 4px">Powered by</div>
                     <img src="./assets/power.svg" />
                 </div>
@@ -135,110 +112,69 @@
         <div id="renderCode"></div>
 
         <div id="tplLink" style="display: none">
-            <div
-                class="tomo-email-tpl"
-                style="
+            <div class="tomo-email-tpl" style="
+                    max-width: 600px;
                     background: #fff;
                     border: 1px solid rgba(226, 227, 240, 1);
-                    margin: 10px;
+                    margin: 10px auto;
                     border-radius: 2px;
                     overflow: hidden;
                     text-align: left;
                     font-family: Switzer;
-                    padding-bottom: 25px;
-                "
-            >
-                <div
-                    class="tomo-tpl-header"
-                    style="
-                        padding: 18px 5px 26px;
+                    padding-bottom: 35px;">
+                <div class="tomo-tpl-header" style="
+                        padding: 18px 0 26px;
                         height: 42px;
                         line-height: 42px;
-                        margin: 0 40px;
-                        border-bottom: 1px solid rgba(145, 158, 171, 0.2);
-                    "
-                >
-                    <div
-                        class="tomo-tpl-name"
-                        style="
-                            font-size: 20px;
-                            font-weight: 500;
-                            background: url({logo})
-                                no-repeat center center;
+                        max-width: 520px;
+                        margin:0 auto;
+                        border-bottom: 1px solid rgba(145, 158, 171, 0.2);">
+                    <div class="tomo-tpl-name" style="
+                            background: url({{logo}}) no-repeat center center;
                             background-size: auto 30px;
-                            height: 40px;
-                            padding-left: 36px;
-                        "
-                    ></div>
+                            height: 40px;"></div>
                 </div>
-                <div
-                    class="tomo-tpl-main"
-                    style="padding: 40px 40px 30px; margin: 0 40px"
-                >
-                    <div
-                        class="tomo-tpl-main-title"
-                        style="font-size: 20px; font-weight: 700"
-                    >
+                <div class="tomo-tpl-main" style="padding: 40px 24px 30px; 
+                        max-width: 450px;
+                        margin:0 auto;">
+                    <div class="tomo-tpl-main-title" style="font-size: 20px; font-weight: 700">
                         Request to export seed phrase(s)
                     </div>
-                    <div
-                        class="tomo-tpl-main-desc"
-                        style="
+                    <div class="tomo-tpl-main-desc" style="
                             font-weight: 400;
                             font-size: 14px;
                             color: rgba(25, 25, 25, 0.9);
                             line-height: 1.8;
-                            margin: 10px 0 0;
-                        "
-                    >
+                            margin: 10px 0 0;">
                         We received a request to export your seed phrase(s). To
                         proceed, please click the link below:
                     </div>
-                    <div
-                        class="tomo-tpl-main-link"
-                        style="
+                    <div class="tomo-tpl-main-link" style="
                             color: #0094ff;
                             word-break: break-all;
                             font-size: 12px;
                             font-weight: 400;
-                            margin: 20px 0 30px;
-                        "
-                    >
-                        <a target="_blank" nofollow noreferrer herf="{value}"
-                            >{value}</a
-                        >
+                            margin: 20px 0 30px;">
+                        <a target="_blank" style="color: #0094ff;" nofollow noreferrer href="{{value}}">{{value}}</a>
                     </div>
-                    <div
-                        class="tomo-tpl-main-tips"
-                        style="
-                            font-size: 12px;
-                            font-weight: 400;
-                            color: rgba(99, 115, 129, 1);
-                        "
-                    >
+                    <div class="tomo-tpl-main-tips" style="font-size: 12px;font-weight: 400;color: rgba(99, 115, 129, 1);">
                         For your security, please keep this information
                         confidential and <strong>DO NOT SHARE</strong> it with
                         anyone, including <strong>customer service</strong>.
                     </div>
                 </div>
 
-                <div
-                    class="tomo-tpl-faq"
-                    style="
+                <div class="tomo-tpl-faq" style="
                         text-align: center;
                         border-top: 1px solid rgba(145, 158, 171, 0.2);
-                        padding: 20px 0 30px;
+                        padding: 20px 24px 30px;
                         font-size: 12px;
                         font-weight: 400;
-                        color: rgba(99, 115, 129, 1);
-                    "
-                >
+                        color: rgba(99, 115, 129, 1);">
                     If you have any questions, reach out to our support team at
                     support@tomo.inc
                 </div>
-                <div
-                    class="tomo-tpl-foot"
-                    style="
+                <div class="tomo-tpl-foot" style="
                         font-weight: 400;
                         font-size: 12px;
                         line-height: 16.8px;
@@ -246,9 +182,7 @@
                         color: rgba(137, 137, 171, 1);
                         display: flex;
                         justify-content: center;
-                        align-items: center;
-                    "
-                >
+                        align-items: center;">
                     <div class="tomo-logo-provider" style="margin-right: 4px">
                         Powered by
                     </div>
@@ -298,7 +232,7 @@
                 return ret.join("");
                 function replaceAction(object) {
                     return temp.replace(
-                        regexp || /\\?\{([^}]+)\}/g,
+                        regexp || /\\?\{{([^}]+)\}}/g,
                         function (match, name) {
                             if (match.charAt(0) == "\\") return match.slice(1);
                             return object[name] != undefined
@@ -309,5 +243,9 @@
                 }
             }
         </script>
+
+
+
+<div style="height: 500px;"></div>
     </body>
 </html>
